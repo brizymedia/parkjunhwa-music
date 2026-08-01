@@ -1,2 +1,64 @@
-# parkjunhwa-music
-박준화 실용음악학원 홈페이지
+# 박준화실용음악학원 홈페이지
+
+전남 여수시 학동에 있는 박준화실용음악학원의 홍보 페이지입니다.
+
+**공개 주소:** https://brizymedia.github.io/parkjunhwa-music/
+
+## 학원 정보
+
+| 항목 | 내용 |
+|---|---|
+| 상호 | 박준화실용음악학원 |
+| 주소 | 전라남도 여수시 학동서2길 6, 2층 |
+| 전화 | 010-6214-4588 |
+| 등록 | 전라남도교육청 등록 학원 (2012.02.16 개원) |
+| 네이버 플레이스 | https://naver.me/FSvD89ZY |
+
+## 구성
+
+`index.html` 파일 하나로 끝나는 단일 페이지입니다. 별도의 빌드나 서버가 필요 없고,
+파일을 더블클릭하면 브라우저에서 바로 열립니다.
+
+섹션 순서: 히어로 → 학원 소개 → 걱정 해소 → 레슨 과목 → 로드맵 → 수강 과정
+→ 진행 절차 → 후기 → 자주 묻는 질문 → 오시는 길
+
+## 자주 고치게 되는 부분
+
+전부 `index.html` 아래쪽 `<script>` 안에 모여 있습니다.
+
+### 연락처
+
+```js
+const CONTACT = {
+  phone: '010-6214-4588',   // 비우면 전화 관련 UI가 모두 숨겨집니다
+  kakao: '',                // 카카오톡 채널 URL을 넣으면 상담 버튼이 생깁니다
+  naver: 'https://naver.me/FSvD89ZY',
+};
+```
+
+### 후기
+
+기본값이 빈 배열이라 후기 섹션이 **숨겨져 있습니다.** 실제로 받은 후기를 넣으면
+그때부터 화면에 나타납니다.
+
+```js
+const REVIEWS = [
+  { text: '후기 내용', name: '김OO', meta: '보컬 · 6개월' },
+];
+```
+
+## 수정 방법
+
+이 레포의 `index.html`을 고치고 커밋하면 1~2분 뒤 위 주소에 자동 반영됩니다.
+
+## 배포
+
+GitHub Pages (`main` 브랜치 루트). `.nojekyll` 파일은 Jekyll 처리를 건너뛰게 합니다.
+
+## 외부 의존성
+
+CDN에서 불러오므로 인터넷 연결이 필요합니다.
+
+- [Tailwind CSS](https://cdn.tailwindcss.com) — 스타일
+- [Pretendard](https://github.com/orioncactus/pretendard) — 한글 폰트
+- [Iconify](https://iconify.design) — 아이콘
