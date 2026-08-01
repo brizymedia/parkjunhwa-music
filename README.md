@@ -57,8 +57,8 @@ GitHub Pages (`main` 브랜치 루트). `.nojekyll` 파일은 Jekyll 처리를 �
 
 ## 외부 의존성
 
-CDN에서 불러오므로 인터넷 연결이 필요합니다.
+거의 없습니다. 스타일(Tailwind)과 아이콘(SVG)은 파일 안에 들어 있어
+인터넷이 끊겨도 화면이 그대로 나옵니다.
 
-- [Tailwind CSS](https://cdn.tailwindcss.com) — 스타일
-- [Pretendard](https://github.com/orioncactus/pretendard) — 한글 폰트
-- [Iconify](https://iconify.design) — 아이콘
+유일한 외부 요청은 [Pretendard](https://github.com/orioncactus/pretendard) 폰트이며,
+이마저 실패해도 시스템 한글 폰트로 대체되어 레이아웃은 유지됩니다.
